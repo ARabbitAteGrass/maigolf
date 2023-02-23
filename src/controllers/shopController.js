@@ -36,7 +36,7 @@ exports.showShop = async (req, res, next) => {
 
     if (!shop) {
       const error = new Error("ไม่พบร้านค้า");
-      error.statusCode = 400;
+      error.statusCode = 404;
       throw error;
     }
 
@@ -176,7 +176,7 @@ exports.showProductId = async (req, res, next) => {
 
     if (!product) {
       const error = new Error("ไม่พบร้านค้า");
-      error.statusCode = 400;
+      error.statusCode = 404;
       throw error;
     }
 
@@ -297,7 +297,7 @@ exports.followShop = async (req, res, next) => {
 
     if (!shop) {
       const error = new Error("ไม่พบร้านค้า");
-      error.statusCode = 400;
+      error.statusCode = 404;
       throw error;
     }
 
@@ -333,7 +333,7 @@ exports.unfollowShop = async (req, res, next) => {
 
     if (!shop) {
       const error = new Error("ไม่พบร้านค้า");
-      error.statusCode = 400;
+      error.statusCode = 404;
       throw error;
     }
 
