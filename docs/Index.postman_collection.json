@@ -1,0 +1,24 @@
+{
+	"info": {
+		"_postman_id": "98c65058-17b6-4e24-b5c4-698dbf2012cc",
+		"name": "Index",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8888210"
+	},
+	"item": [
+		{
+			"name": "Get index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}",
+					"host": [
+						"{{baseurl}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
