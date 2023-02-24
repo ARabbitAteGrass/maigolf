@@ -61,9 +61,7 @@ router.post(
     body("specs.brand")
       .not()
       .isEmpty()
-      .withMessage("กรุณาป้อนชื่อแบรนด์ด้วย")
-      .isString()
-      .withMessage("ชื่อแบรนด์ไม่ถูกต้อง"),
+      .withMessage("กรุณาป้อนชื่อแบรนด์ด้วย"),
     body("specs.unit")
       .isNumeric()
       .withMessage("จำนวนไม้ในเซ็ตต้องเป็นตัวเลขเท่านั้น"),
@@ -114,7 +112,7 @@ router.put(
   [
     body("name").isString().withMessage("ชื่อสินค้าไม่ถูกต้อง"),
     body("price").isNumeric().withMessage("ราคาสินค้าต้องเป็นตัวเลขเท่านั้น"),
-    body("specs.brand").isString().withMessage("ชื่อแบรนด์ไม่ถูกต้อง"),
+    // body("specs.brand").isString().withMessage("ชื่อแบรนด์ไม่ถูกต้อง"),
     // body("specs.unit")
     //   .isNumeric()
     //   .withMessage("จำนวนไม้ในเซ็ตต้องเป็นตัวเลขเท่านั้น"),
