@@ -5,6 +5,10 @@ MaiGolf API
 ## Usage
 
 ```
+npm i
+```
+
+```
 npm start
 ```
 
