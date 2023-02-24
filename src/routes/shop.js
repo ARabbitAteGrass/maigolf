@@ -49,7 +49,7 @@ router.post(
     body("price")
       .not()
       .isEmpty()
-      .withMessage("กรุณาราคาสินค้าด้วย")
+      .withMessage("กรุณาระบุราคาสินค้าด้วย")
       .isNumeric()
       .withMessage("ราคาสินค้าต้องเป็นตัวเลขเท่านั้น"),
     body("shopId")
@@ -58,13 +58,19 @@ router.post(
       .withMessage("กรุณาระบุรหัสร้านค้าขายสินค้าด้วย")
       .isString()
       .withMessage("รหัสร้านค้าไม่ถูกต้อง"),
-    body("specs.volume")
+    body("specs.unit")
       .isNumeric()
-      .withMessage("ปริมาตรต้องเป็นตัวเลขเท่านั้น"),
-    body("specs.length")
-      .isNumeric()
-      .withMessage("ความยาวต้องเป็นตัวเลขเท่านั้น"),
-    body("specs.angle").isNumeric().withMessage("มุมต้องเป็นตัวเลขเท่านั้น"),
+      .withMessage("จำนวนไม้ในเซ็ตต้องเป็นตัวเลขเท่านั้น"),
+    body("specs.inset")
+      .isEmpty()
+      .withMessage("กรุณาระบุชนิดของไม้ในเซ็ตด้วย"),
+    // body("specs.volume")
+    //   .isNumeric()
+    //   .withMessage("ปริมาตรต้องเป็นตัวเลขเท่านั้น"),
+    // body("specs.length")
+    //   .isNumeric()
+    //   .withMessage("ความยาวต้องเป็นตัวเลขเท่านั้น"),
+    // body("specs.angle").isNumeric().withMessage("มุมต้องเป็นตัวเลขเท่านั้น"),
     body("specs.gender")
       .isIn(["male", "female", "unisex"])
       .withMessage("เพศไม่ถูกต้อง"),
@@ -101,13 +107,19 @@ router.put(
   [
     body("name").isString().withMessage("ชื่อสินค้าไม่ถูกต้อง"),
     body("price").isNumeric().withMessage("ราคาสินค้าต้องเป็นตัวเลขเท่านั้น"),
-    body("specs.volume")
+    body("specs.unit")
       .isNumeric()
-      .withMessage("ปริมาตรต้องเป็นตัวเลขเท่านั้น"),
-    body("specs.length")
-      .isNumeric()
-      .withMessage("ความยาวต้องเป็นตัวเลขเท่านั้น"),
-    body("specs.angle").isNumeric().withMessage("มุมต้องเป็นตัวเลขเท่านั้น"),
+      .withMessage("จำนวนไม้ในเซ็ตต้องเป็นตัวเลขเท่านั้น"),
+    body("specs.inset")
+      .isEmpty()
+      .withMessage("กรุณาระบุชนิดของไม้ในเซ็ตด้วย"),
+    // body("specs.volume")
+    //   .isNumeric()
+    //   .withMessage("ปริมาตรต้องเป็นตัวเลขเท่านั้น"),
+    // body("specs.length")
+    //   .isNumeric()
+    //   .withMessage("ความยาวต้องเป็นตัวเลขเท่านั้น"),
+    // body("specs.angle").isNumeric().withMessage("มุมต้องเป็นตัวเลขเท่านั้น"),
     body("specs.gender")
       .isIn(["male", "female", "unisex"])
       .withMessage("เพศไม่ถูกต้อง"),

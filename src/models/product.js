@@ -28,18 +28,26 @@ const productSchema = new Schema(
       default: null,
     },
     specs: {
-      volume: {
+      unit:{
         type: Number,
         default: null,
       },
-      length: {
-        type: Number,
+      inset:{
+        type: String,
         default: null,
       },
-      angle: {
-        type: Number,
-        default: null,
-      },
+      // volume: {
+      //   type: Number,
+      //   default: null,
+      // },
+      // length: {
+      //   type: Number,
+      //   default: null,
+      // },
+      // angle: {
+      //   type: Number,
+      //   default: null,
+      // },
       gender: {
         type: String,
         default: "unisex",
