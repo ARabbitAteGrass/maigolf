@@ -62,6 +62,7 @@ router.post(
       .isNumeric()
       .withMessage("จำนวนไม้ในเซ็ตต้องเป็นตัวเลขเท่านั้น"),
     body("specs.inset")
+      .not()
       .isEmpty()
       .withMessage("กรุณาระบุชนิดของไม้ในเซ็ตด้วย"),
     // body("specs.volume")
