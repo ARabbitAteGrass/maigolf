@@ -30,8 +30,7 @@ const productSchema = new Schema(
     specs: {
       brand:{
         type: String,
-        required: true,
-        trim: true,
+        default: "No Brand",
       },
       unit:{
         type: Number,
